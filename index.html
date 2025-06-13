@@ -1,1 +1,641 @@
 
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سياسة الخصوصية - forteo_files</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'IBM Plex Sans Arabic', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: #477A71;
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .logo h1 {
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .logo p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .date {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* Navigation */
+        .nav {
+            background: white;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 15px 0;
+            position: sticky;
+            top: 80px;
+            z-index: 99;
+        }
+
+        .nav-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .nav-btn {
+            background: none;
+            border: 1px solid #477A71;
+            color: #477A71;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            background: #477A71;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Main Content */
+        .main {
+            padding: 40px 0;
+        }
+
+        .section {
+            background: white;
+            margin-bottom: 30px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-right: 5px solid #477A71;
+        }
+
+        .section h2 {
+            color: #477A71;
+            font-size: 28px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .section h3 {
+            color: #2c5530;
+            font-size: 22px;
+            margin: 25px 0 15px 0;
+            font-weight: 500;
+        }
+
+        .section p {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .section ul {
+            margin: 15px 0;
+            padding-right: 20px;
+        }
+
+        .section li {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        /* Special Cards */
+        .info-card {
+            background: linear-gradient(135deg, #477A71, #5a8d84);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .info-card h3 {
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .highlight-box {
+            background: #f0f8f7;
+            border: 2px solid #477A71;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .highlight-box::before {
+            content: "ℹ️";
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 20px;
+        }
+
+        .warning-box {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .warning-box::before {
+            content: "⚠️";
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 20px;
+        }
+
+        .success-box {
+            background: #d4edda;
+            border: 2px solid #28a745;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .success-box::before {
+            content: "✅";
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 20px;
+        }
+
+        /* Icons */
+        .icon {
+            width: 30px;
+            height: 30px;
+            background: #477A71;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 16px;
+        }
+
+        /* Footer */
+        .footer {
+            background: #477A71;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 50px;
+        }
+
+        .footer p {
+            margin-bottom: 10px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            .nav-buttons {
+                justify-content: center;
+            }
+
+            .section {
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+
+            .section h2 {
+                font-size: 24px;
+            }
+
+            .section h3 {
+                font-size: 20px;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Animation */
+        .section {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section:nth-child(1) { animation-delay: 0.1s; }
+        .section:nth-child(2) { animation-delay: 0.2s; }
+        .section:nth-child(3) { animation-delay: 0.3s; }
+        .section:nth-child(4) { animation-delay: 0.4s; }
+        .section:nth-child(5) { animation-delay: 0.5s; }
+        .section:nth-child(6) { animation-delay: 0.6s; }
+        .section:nth-child(7) { animation-delay: 0.7s; }
+        .section:nth-child(8) { animation-delay: 0.8s; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">📁</div>
+                    <div>
+                        <h1>forteo_files</h1>
+                        <p>مدير ملفات الأعمال - Noti-File</p>
+                    </div>
+                </div>
+                <div class="date">
+                    آخر تحديث: <span id="current-date"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-buttons">
+                <button class="nav-btn" onclick="scrollToSection('overview')">نظرة عامة</button>
+                <button class="nav-btn" onclick="scrollToSection('data-collection')">جمع البيانات</button>
+                <button class="nav-btn" onclick="scrollToSection('data-usage')">استخدام البيانات</button>
+                <button class="nav-btn" onclick="scrollToSection('permissions')">الصلاحيات</button>
+                <button class="nav-btn" onclick="scrollToSection('storage')">تخزين البيانات</button>
+                <button class="nav-btn" onclick="scrollToSection('user-rights')">حقوقك</button>
+                <button class="nav-btn" onclick="scrollToSection('contact')">اتصل بنا</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- App Info -->
+            <div class="info-card">
+                <h3>📱 forteo_files (Noti-File)</h3>
+                <p>أداة إنتاجية مصممة للشركات والمؤسسات لإدارة ملفات PDF والصور المتعلقة بعملياتها التجارية.</p>
+                <div class="success-box" style="margin-top: 20px;">
+                    <strong>مهم:</strong> forteo_files مجاني تماماً بدون مشتريات أو اشتراكات أو إعلانات.
+                </div>
+            </div>
+
+            <!-- Overview -->
+            <section id="overview" class="section">
+                <h2><span class="icon">🔒</span>نظرة عامة على سياسة الخصوصية</h2>
+                <p>تصف سياسة الخصوصية هذه كيفية جمع واستخدام وحماية معلوماتك عند استخدام تطبيق forteo_files ("نحن" أو "التطبيق"). نحن ملتزمون بحماية خصوصيتك وضمان أمان معلوماتك الشخصية.</p>
+                <div class="highlight-box">
+                    <p><strong>التزامنا:</strong> نحن نؤمن بالشفافية الكاملة في كيفية التعامل مع بياناتك ونضمن لك السيطرة الكاملة على معلوماتك.</p>
+                </div>
+            </section>
+
+            <!-- Data Collection -->
+            <section id="data-collection" class="section">
+                <h2><span class="icon">📊</span>المعلومات التي نجمعها</h2>
+                
+                <h3>👤 معلومات الحساب</h3>
+                <ul>
+                    <li>عنوان البريد الإلكتروني (لإنشاء الحساب والمصادقة)</li>
+                    <li>كلمة المرور (مشفرة ومحفوظة بأمان)</li>
+                    <li>دور المستخدم (مدير/مدير أو عميل)</li>
+                    <li>معلومات الملف الشخصي التي تختار تقديمها</li>
+                </ul>
+
+                <h3>📁 بيانات الأعمال</h3>
+                <ul>
+                    <li>معلومات الشركات والوزارات التي تنشئها</li>
+                    <li>ملفات PDF والصور التي ترفعها</li>
+                    <li>بيانات وصفية للملفات (الأسماء، تواريخ الانتهاء، الأوصاف)</li>
+                    <li>بيانات تصنيف وتنظيم المستندات</li>
+                </ul>
+
+                <h3>⚙️ بيانات استخدام التطبيق</h3>
+                <ul>
+                    <li>تفضيلات التطبيق (المظهر، اللغة، إعدادات الإشعارات)</li>
+                    <li>بيانات تفاعل المستخدم لتحسين وظائف التطبيق</li>
+                    <li>البيانات التقنية لأداء التطبيق وتقارير الأخطاء</li>
+                </ul>
+            </section>
+
+            <!-- Data Usage -->
+            <section id="data-usage" class="section">
+                <h2><span class="icon">🔄</span>كيف نستخدم معلوماتك</h2>
+                
+                <h3>الاستخدامات الأساسية:</h3>
+                <ul>
+                    <li>توفير الوظائف الأساسية للتطبيق</li>
+                    <li>إدارة شركاتك ومستنداتك</li>
+                    <li>إرسال إشعارات انتهاء صلاحية الملفات</li>
+                    <li>إدارة صلاحيات المستخدمين والوصول</li>
+                    <li>تسهيل مشاركة الملفات وتحميلها</li>
+                </ul>
+
+                <h3>الاستخدامات الثانوية:</h3>
+                <ul>
+                    <li>تحسين أداء التطبيق والميزات</li>
+                    <li>تقديم دعم العملاء</li>
+                    <li>ضمان الأمان ومنع سوء الاستخدام</li>
+                    <li>الامتثال للمتطلبات القانونية</li>
+                </ul>
+            </section>
+
+            <!-- Permissions -->
+            <section id="permissions" class="section">
+                <h2><span class="icon">🔐</span>صلاحيات التطبيق</h2>
+                
+                <h3>💾 الوصول للتخزين</h3>
+                <div class="highlight-box">
+                    <p><strong>الغرض:</strong> رفع الصور وتحميل الملفات</p>
+                    <p><strong>متى يُطلب:</strong> فقط عندما تختار رفع أو تحميل الملفات</p>
+                    <p><strong>المبرر:</strong> أساسي لوظائف التطبيق الأساسية - إدارة والوصول لمستندات عملك</p>
+                </div>
+
+                <h3>🔔 الإشعارات</h3>
+                <div class="highlight-box">
+                    <p><strong>الغرض:</strong> تنبيهك حول الملفات المنتهية الصلاحية وطلبات التحديث</p>
+                    <p><strong>متى يُطلب:</strong> عند التشغيل الأول أو عند تفعيل الإشعارات في الإعدادات</p>
+                    <p><strong>المبرر:</strong> بالغ الأهمية لضمان عدم تفويت انتهاء صلاحية الملفات المهمة</p>
+                </div>
+            </section>
+
+            <!-- Data Storage -->
+            <section id="storage" class="section">
+                <h2><span class="icon">🛡️</span>تخزين البيانات والأمان</h2>
+                
+                <div class="info-card">
+                    <h3>🔐 تخزين سحابي آمن</h3>
+                    <p>جميع بياناتك محفوظة بأمان باستخدام Firebase Firestore و Firebase Storage، البنية التحتية السحابية من  على مستوى المؤسسات مع تدابير أمنية متقدمة.</p>
+                </div>
+
+                <h3>التدابير الأمنية:</h3>
+                <ul>
+                    <li>التشفير من النهاية إلى النهاية</li>
+                    <li>مصادقة آمنة</li>
+                    <li>عمليات تدقيق أمنية منتظمة</li>
+                    <li>ضوابط الوصول والأذونات</li>
+                </ul>
+
+                <h3>موقع البيانات:</h3>
+                <ul>
+                    <li>محفوظة في مراكز بيانات الآمنة</li>
+                    <li>متوافقة مع المعايير الدولية</li>
+                    <li>نسخ احتياطية منتظمة وتكرار</li>
+                    <li>ضمان وقت تشغيل 99.9%</li>
+                </ul>
+            </section>
+
+            <!-- User Rights -->
+            <section id="user-rights" class="section">
+                <h2><span class="icon">⚖️</span>حقوقك والتحكم</h2>
+                
+                <div class="warning-box">
+                    <h3>🗑️ حذف الحساب</h3>
+                    <p>لديك السيطرة الكاملة على بياناتك ويمكنك حذف حسابك في أي وقت.</p>
+                    <p><strong>مهم:</strong> حذف حسابك سيؤدي إلى إزالة دائمة لجميع بياناتك، بما في ذلك الشركات والمستندات والملفات. لا يمكن التراجع عن هذا الإجراء.</p>
+                </div>
+
+                <h3>حقوقك تشمل:</h3>
+                <ul>
+                    <li>الوصول إلى بياناتك الشخصية</li>
+                    <li>تصحيح المعلومات غير الدقيقة</li>
+                    <li>حذف حسابك وبياناتك</li>
+                    <li>تصدير بياناتك</li>
+                    <li>التحكم في تفضيلات الإشعارات</li>
+                    <li>إدارة أذونات التطبيق</li>
+                    <li>سحب الموافقة في أي وقت</li>
+                    <li>الاتصال بنا بشأن مخاوف الخصوصية</li>
+                </ul>
+            </section>
+
+            <!-- Third Party Services -->
+            <section class="section">
+                <h2><span class="icon">🤝</span>الخدمات الخارجية</h2>
+                
+                <h3>خدمات Firebase</h3>
+                <p>نستخدم  Firebase للمصادقة وتخزين البيانات و لراحة المستخدم.</p>
+                
+                <div class="success-box">
+                    <p><strong>عدم مشاركة البيانات:</strong> نحن لا نبيع أو نتاجر أو نشارك معلوماتك الشخصية مع أطراف ثالثة لأغراض التسويق.</p>
+                </div>
+            </section>
+
+            <!-- Contact -->
+            <section id="contact" class="section">
+                <h2><span class="icon">📞</span>اتصل بنا</h2>
+                
+                <p>إذا كان لديك أي أسئلة حول سياسة الخصوصية هذه أو بياناتك، يرجى التواصل معنا:</p>
+                
+                <div class="highlight-box">
+                    <h3>📧 الدعم عبر البريد الإلكتروني</h3>
+                    <p>متاح من خلال قسم الدعم في التطبيق</p>
+                </div>
+                
+                <div class="highlight-box">
+                    <h3>💬 دعم واتساب</h3>
+                    <p>متاح من خلال التطبيق للمساعدة الفورية</p>
+                </div>
+                
+                <div class="info-card">
+                    <p>نحن عادة ما نرد على الاستفسارات المتعلقة بالخصوصية خلال 48 ساعة في أيام العمل.</p>
+                </div>
+            </section>
+
+            <!-- Updates -->
+            <section class="section">
+                <h2><span class="icon">🔄</span>تحديثات السياسة</h2>
+                
+                <p>قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر. عندما نفعل ذلك:</p>
+                <ul>
+                    <li>سنخطرك من خلال التطبيق</li>
+                    <li>سيتم تغيير تاريخ التحديث في أعلى هذه السياسة</li>
+                    <li>التغييرات الكبيرة ستتطلب موافقتك</li>
+                    <li>يمكنك دائماً العثور على أحدث إصدار في التطبيق</li>
+                </ul>
+                <p>من خلال الاستمرار في استخدام forteo_files بعد أي تحديثات، فإنك توافق على سياسة الخصوصية المنقحة.</p>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 forteo_files. جميع الحقوق محفوظة.</p>
+            <p>تم تحديث سياسة الخصوصية هذه آخر مرة في <span id="footer-date"></span>.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Set current date
+        function setCurrentDate() {
+            const now = new Date();
+            const options = { 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric',
+                weekday: 'long'
+            };
+            const arabicDate = now.toLocaleDateString('ar-SA', options);
+            
+            document.getElementById('current-date').textContent = arabicDate;
+            document.getElementById('footer-date').textContent = arabicDate;
+        }
+
+        // Smooth scroll to sections
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+                
+                // Add highlight effect
+                element.style.backgroundColor = '#f0f8f7';
+                setTimeout(() => {
+                    element.style.backgroundColor = '';
+                }, 2000);
+            }
+        }
+
+        // Add scroll spy functionality
+        function addScrollSpy() {
+            const sections = document.querySelectorAll('.section[id]');
+            const navButtons = document.querySelectorAll('.nav-btn');
+            
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (window.pageYOffset >= sectionTop - 200) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                navButtons.forEach(btn => {
+                    btn.classList.remove('active');
+                    if (btn.getAttribute('onclick').includes(current)) {
+                        btn.classList.add('active');
+                    }
+                });
+            });
+        }
+
+        // Add animation on scroll
+        function addScrollAnimation() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            document.querySelectorAll('.section').forEach(section => {
+                observer.observe(section);
+            });
+        }
+
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            setCurrentDate();
+            addScrollSpy();
+            addScrollAnimation();
+            
+            // Add active class style
+            const style = document.createElement('style');
+            style.textContent = `
+                .nav-btn.active {
+                    background: #477A71;
+                    color: white;
+                }
+            `;
+            document.head.appendChild(style);
+        });
+
+        // Add smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                scrollToSection(targetId);
+            });
+        });
+    </script>
+</body>
+</html>
